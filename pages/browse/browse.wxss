@@ -1,0 +1,48 @@
+.browse .header {
+  flex-direction: column;
+  height: 8rem;
+  width: 100vw;
+  margin-bottom: .8rem;
+}
+
+.browse .header .logo {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.browse .header .logo image {
+  width: 100%;
+  height: 100%;
+}
+
+.browse .header .name {
+  margin-top: .5rem;
+}
+
+.browse .content {
+  padding: 0 .8rem;
+}
+
+.browse .content .setting-module {
+  height: 2.5rem;
+  margin-bottom: .3rem;
+  border-bottom: 1px solid #d3d3d3;
+  padding-left: .4rem;
+}
+
+.browse .content .setting-module .title {
+  flex: 1;
+  font-size: .9rem;
+}
+
+.browse .content .setting-module .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.browse .content .setting-module .icon image {
+  height: 1rem;
+  width: 1rem;
+}

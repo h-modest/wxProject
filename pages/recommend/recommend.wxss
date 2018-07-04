@@ -1,0 +1,115 @@
+.recommend {
+  padding-bottom: 1rem;
+}
+
+/* nav-style */
+.recommend .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1.8rem;
+  width: 100vw;
+  font-size: .8rem;
+  text-align: center;
+  white-space: nowrap;
+  background-color:#fff;
+  z-index: 10;
+}
+
+.recommend .nav .name {
+  display: inline-block;
+  padding: .4rem .8rem;
+  position: relative;
+}
+
+.recommend .nav .name::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: transparent;
+}
+
+.recommend .nav .name:active {
+  background: #ff2d55;
+  color: #fff;
+}
+
+.recommend .nav .name.active::after {
+  background: #ff2d55;
+}
+
+/* nav-content-style */
+.recommend swiper {
+  padding-top: 1.4rem;
+}
+
+.recommend .album-list {
+  padding: .5rem 0;
+}
+
+.recommend .album-list .single-album {
+  float: left;
+  width: 47vw;
+  margin-left: 2vw;
+  margin-bottom: 4vw;
+}
+
+.recommend .album-list .single-album .album-img {
+  position: relative;
+  height: 47vw;
+}
+
+.recommend .album-list .single-album .album-img:active > .play-icon {
+  display: none;
+}
+
+.recommend .album-list .single-album .album-img:active > .play-icon.play-hover-icon {
+  display: block;
+}
+
+.recommend .album-list .single-album .album-img .album-logo {
+  width: 100%;
+  height: 100%
+}
+
+.recommend .album-list .single-album .album-img .play-icon {
+  position: absolute;
+  bottom: .2rem;
+  right: .2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.recommend .album-list .single-album .album-img .play-icon.play-hover-icon {
+  display: none;
+}
+
+.recommend .album-list .single-album .album-img .time {
+  position: absolute;
+  bottom: .2rem;
+  left: .2rem;
+  font-size: .8rem;
+  color: #fff;
+  padding: .2rem .4rem;
+  background-color: rgba(0,0,0,.4);
+}
+
+.recommend .album-list .single-album .dec {
+  margin-top: .3rem;
+  font-size: .85rem;
+}
+
+.recommend .album-list .single-album .dec .singer {
+  font-size: .75rem;
+  color: #999;
+}
+
+.recommend .album-list .more {
+  font-size: .85rem;
+  color: #aaa;
+  text-align: center;
+}

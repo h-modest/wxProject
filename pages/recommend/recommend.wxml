@@ -1,0 +1,31 @@
+<view class="recommend flex-drap">
+  <scroll-view  class="nav" scroll-x="true" scroll-left="{{nav_scroll}}" scroll-with-animation="true">
+    <block wx:for="{{nav_list}}" wx:for-index="i" wx:key="i" wx:for-item="vo">
+      <text class="{{i==current_tab ? 'active' : ''}} name" bindtap="toggleTab" data-id="{{i}}">{{vo.name}}</text>
+    </block>
+  </scroll-view>
+  <swiper current="{{current_tab}}" bindchange="swiper" style="height: {{scroll_height}}px">
+    <block wx:for="{{nav_list}}" wx:for-index="i" wx:for-item="vo" wx:key="i">
+      <swiper-item>
+        <scroll-view class="album-list" scroll-y="true" bindscrolltolower="loadMore" style="height: {{scroll_height}}px">
+          <block wx:for="{{vo.children}}" wx:for-index="vi" wx:for-item="vn" wx:key="vi" wx:if="{{vi<6}}">
+            <view class="single-album">
+              <view class="album-img" bindtap="videoPlay" data-id="{{vn.vid}}">
+                <image src="{{vn.imageUrl}}" class="album-logo" />
+                <image src="../../image/play.png" class="play-icon" />
+                <image src="../../image/play-s.png" class="play-icon play-hover-icon" />
+                <view class="time">{{vn.duration}}</view>
+              </view>
+              <view class="dec">
+                <text>{{vn.name}}</text>
+                <view class="singer">{{vn.singer}}</view>
+              </view>
+            </view>
+          </block>
+          <view class="more">加载更多</view>
+          <view class="clearfix"></view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

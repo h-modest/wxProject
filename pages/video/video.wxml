@@ -1,0 +1,7 @@
+<view class="video-detail">
+  <video class="album" id="myVideo" src="{{album.src}}" enable-danmu danmu-btn controls danmu-list="{{danmuList}}" />
+  <view class="album-tanmu fl-ct">
+    <input placeholder="请输入弹幕" bindinput="bindInputBlur" />
+    <button bindtap="sendDanmu">弹幕</button>
+  </view>
+</view>

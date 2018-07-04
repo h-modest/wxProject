@@ -1,0 +1,44 @@
+<view class="main flex-drap">
+  <view class="new-song">
+    <text class="title">最近新添加></text>
+    <view class="album-list">
+      <block wx:for="{{album}}" wx:for-index="i" wx:for-item="vo" wx:key="i">
+        <view class="album-item" bindtap="play" data-id="{{vo.id}}">
+          <image src="{{vo.imageUrl}}" class="album-logo" />
+          <text class="name">{{ vo.name }}</text>
+          <text class="singer">{{ vo.singer }}</text>
+        </view>
+      </block>
+      <view class="clearfix"></view>
+    </view>
+    <view class="toggle frl">
+      <text>播放列表</text>
+      <view class="icon">
+        <image src="../../image/icon-jiantou.png" />
+      </view>
+    </view>
+  </view>
+  <view class="feature-list">
+    <block wx:for="{{ feature_list }}" wx:for-index="i" wx:key="i" wx:for-item="vo">
+      <view class="feature-item frl">
+        <image src="{{ vo.imageUrl }}" class="feature-logo" />
+        <text class="title">{{vo.title}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="current-play frl">
+    <image src="{{current_play.imageUrl}}" class="play-img" />
+    <view class="name">
+      {{ current_play.name }}
+    </view>
+    <view class="play-icon" bindtap="audioPlay">
+      <block wx:if="{{ playing == true }}">
+        <image src="../../image/icon-pause.png" />
+      </block>
+      <block wx:elif="{{ playing == false }}">
+        <image src="../../image/icon-play-s.png" />
+      </block>
+      <block wx:else></block>
+    </view>
+  </view>
+</view>

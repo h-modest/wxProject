@@ -1,0 +1,19 @@
+.video-detail video.album {
+  width: 100vw;
+}
+
+.video-detail .album-tanmu {
+  padding: 1rem;
+}
+
+.video-detail .album-tanmu input {
+  flex: 1;
+  padding: .3rem;
+  border: 1px solid #ccc;
+}
+
+.video-detail .album-tanmu button {
+  width: 5rem;
+  font-size: .9rem;
+  margin-left: .6rem;
+}

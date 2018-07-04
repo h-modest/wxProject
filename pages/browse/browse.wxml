@@ -1,0 +1,18 @@
+<view class="browse flex-drap">
+  <view class="header fl-ct">
+    <view class="logo">
+      <image src="{{userInfo.avatarUrl}}" />
+    </view>
+    <view class="name">
+    <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="setting-module fl-ct" wx:for="{{ setting_list }}" wx:key="index">
+      <text class="title">{{ item.title }}</text>
+      <view class="icon fl-ct">
+        <image src="../../image/icon-next.png" />
+      </view>
+    </view>
+  </view>
+</view>
